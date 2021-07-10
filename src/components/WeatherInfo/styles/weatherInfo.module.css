@@ -1,0 +1,193 @@
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.secHeader {
+  text-align: right;
+  font-family: "Righteous", cursive;
+  color: rgba(53, 53, 53, 0.842);
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 1em;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  letter-spacing: 4px;
+  border-right: 10px solid;
+}
+
+.weather-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
+          box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
+  background-color: #4ca1a3;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 1em;
+  padding: 1.5em;
+  height: 300px;
+}
+
+.weather-info .loc-temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0.5em 0 0.5em;
+}
+
+.weather-info .loc-temp .location {
+  font-size: 1.7rem;
+  margin-top: 0.3em;
+}
+
+.weather-info .loc-temp .temp {
+  position: relative;
+  margin: 2em auto auto auto;
+}
+
+.weather-info .loc-temp .temp p {
+  font-size: 8rem;
+}
+
+.weather-info .loc-temp .temp span {
+  position: absolute;
+  font-size: 4rem;
+  height: 10rem;
+}
+
+.weather-info .todays-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather-info .todays-weather h1 {
+  margin-top: 0.5em;
+}
+
+.weather-info .todays-weather .weather-img {
+  max-width: 200px;
+  width: 100%;
+  max-height: 300px;
+  margin: 1em auto auto auto;
+  opacity: 2;
+}
+
+.weather-info .todays-weather p {
+  font-size: 1.5rem;
+}
+
+.weather-info .weather-details h1 {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.weather-info .weather-details p {
+  font-size: 1.3rem;
+  margin: 1em auto;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .secHeader {
+    font-size: 1.2rem;
+  }
+  .weather-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .weather-info .loc-temp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
+  }
+  .weather-info .todays-weather {
+    border-top: 2px solid rgba(124, 124, 124, 0.507);
+    margin: 1em auto;
+    width: 100%;
+  }
+  .weather-info .todays-weather h1 {
+    margin: 1em auto;
+  }
+  .weather-info .todays-weather img {
+    margin: 1em auto;
+  }
+  .weather-info .todays-weather p {
+    margin: 1em auto;
+  }
+  .weather-info .weather-details {
+    border-top: 2px solid rgba(124, 124, 124, 0.507);
+    width: 100%;
+  }
+  .weather-info .weather-details h1 {
+    margin: 1em auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .weather-info .loc-temp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=weatherInfo.module.css.map */

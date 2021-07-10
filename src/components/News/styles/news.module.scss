@@ -1,0 +1,88 @@
+@import "../../global";
+
+.article-container {
+  @include applyCon;
+  margin: auto;
+
+  .news-header {
+    @include border(left);
+    border-left: 10px solid;
+  }
+
+  .article {
+    @include flex(row);
+    @include setBtnStyle;
+
+    background-color: azure;
+    margin: 1em;
+
+    .art-content {
+      margin: 0.5em;
+    }
+    img {
+      width: 95%;
+      max-width: 300px;
+      border-radius: 20px;
+      border: 10px solid white;
+    }
+
+    .title {
+      margin: 0.5em 0;
+      font-family: $font-default;
+    }
+
+    .content {
+      margin: 1.5em 0;
+      font-family: $font-pri;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .source {
+      @include flex(row);
+      margin: 1em 0;
+    }
+  }
+
+  @import "./view-more";
+}
+
+@media (max-width: 700px) {
+  .article-container {
+    .article {
+      .title {
+        font-size: 1.2rem;
+      }
+      .content {
+        font-size: 1rem;
+      }
+    }
+
+    .news-header {
+      font-size: 1.2rem;
+    }
+
+    .view-more {
+      .read-news {
+        width: 50%;
+        // left: 5%;
+        // right: 5%;
+      }
+      .read-news_title {
+        font-size: 1.2rem;
+      }
+      .prev,
+      .next {
+        font-size: 1.1rem;
+      }
+    }
+    .article {
+      @include flex(column);
+
+      img {
+        max-width: 500px;
+        margin: auto;
+      }
+    }
+  }
+}

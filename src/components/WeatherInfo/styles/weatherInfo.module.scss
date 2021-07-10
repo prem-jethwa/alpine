@@ -1,0 +1,29 @@
+@import "../../global";
+
+.section {
+  @include applyCon;
+}
+
+.secHeader {
+  @include border(right);
+  border-right: 10px solid;
+}
+
+.weather-info {
+  @include flex(row);
+  @include setBtnStyle;
+  // border: 1px solid rgba(0, 181, 253, 0.651);
+  background-color: $sec-bg;
+  font-family: $font-header;
+
+  margin: 1em;
+  padding: 1.5em;
+  height: 300px;
+  // background-color: $section-bg;
+
+  @import "./loc-temp";
+  @import "./todays-weather";
+  @import "./weather-details";
+}
+
+@import "./media-query";

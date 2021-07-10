@@ -1,0 +1,15 @@
+.location {
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  .location {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=location.module.css.map */

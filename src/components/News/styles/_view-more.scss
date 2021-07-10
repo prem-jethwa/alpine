@@ -1,0 +1,58 @@
+.view-more {
+  @include flex(row);
+
+  position: relative;
+  width: 90%;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.3em;
+  margin: auto auto 3em auto;
+
+  .read-news {
+    position: absolute;
+    width: 65%;
+    border-bottom: 1px solid;
+    margin: 0.7em auto;
+    align-items: center;
+    left: 15%;
+    right: 15%;
+    z-index: -3;
+  }
+  .read-news_title {
+    position: absolute;
+    z-index: 5;
+    border-radius: 10px;
+
+    left: 35%;
+    right: 35%;
+    margin: auto;
+    background-color: aliceblue;
+  }
+
+  .prev,
+  .next {
+    @include setBtnStyle;
+    background-color: rgba(128, 128, 128, 0.384);
+
+    padding: 0.5em;
+    cursor: pointer;
+  }
+  .prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  .next {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+  }
+
+  .prev:hover,
+  .next:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../global";
+
+.search-box {
+  @include flex(row);
+  // @include setBtnStyle;
+  width: 60%;
+  // border: 1px solid rgba(88, 88, 88, 0.521);
+  background-color: $loc-bg;
+  margin: auto;
+  padding: 0.5em;
+  border-radius: 8px;
+  h2 {
+    text-align: center;
+    align-items: center;
+    margin: 0 0.5em;
+  }
+  // input {
+  // @include rmDefault;
+
+  //   background-color: $sec-bg;
+  //   margin: 0 0 0 0.5em;
+  //   font-size: 1.7rem;
+  //   width: 90%;
+  // }
+  // button {
+  //   @include rmDefault;
+  //   @include setBtnStyle;
+  //   font-size: 1.3rem;
+  //   margin: 0;
+  // }
+}
+
+// @media (max-width: 700px) {
+//   .search-box {
+//     input {
+//       font-size: 1.1rem;
+//     }
+//     button {
+//       font-size: 1.1rem;
+//       padding: 0.3em;
+//     }
+//   }
+// }

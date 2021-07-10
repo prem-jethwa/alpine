@@ -1,0 +1,45 @@
+@import "../../global";
+
+nav {
+  padding: 1em 0;
+  background-color: $pri-bg;
+}
+
+.nav-wrapper {
+  @include flex(row);
+  font-family: $font-default;
+
+  justify-content: space-evenly;
+  .logo {
+    margin: auto 0.5em;
+    font-size: 2.5rem;
+  }
+  .search-location {
+    width: 85%;
+    @include flex(row);
+  }
+}
+
+.container {
+  @include applyCon;
+}
+
+@import "./time";
+@import "./loc";
+
+@media (max-width: 700px) {
+  .nav-wrapper {
+    @include flex(column);
+    .logo {
+      margin: 0 auto 0.5em auto;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .search-location {
+      width: 95%;
+      margin: auto;
+      // @include flex(row);
+      font-size: 0.8rem;
+    }
+  }
+}

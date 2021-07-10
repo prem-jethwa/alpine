@@ -1,0 +1,13 @@
+@import "../../global";
+
+.location {
+  @include rmDefault;
+  font-size: 1.7rem;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  .location {
+    font-size: 1rem;
+  }
+}

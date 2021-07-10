@@ -1,0 +1,53 @@
+// virable declaration
+$pri-bg: #4aa96b8f;
+$sec-bg: #4ca1a3;
+$section-bg: rgba(191, 225, 255, 0.808);
+$loc-bg: #4ca1a3a6;
+
+$border-pri: rgba(0, 152, 179, 0.767);
+
+// font styles
+$font-pri: "Cormorant Garamond", serif;
+$font-sec: "Do Hyeon", sans-serif;
+$font-header: "Josefin Sans", sans-serif;
+$font-main: "Righteous", cursive;
+$font-default: "Varela Round", sans-serif;
+
+// mixins
+@mixin flex($dirction) {
+  display: flex;
+  flex-direction: $dirction;
+  justify-content: space-between;
+}
+@mixin applyCon {
+  max-width: 900px;
+  margin: 0 auto;
+}
+@mixin rmDefault {
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+@mixin setBtnStyle {
+  padding: 0.5em;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
+}
+
+@mixin topBorder {
+  border-top: 2px solid rgba(124, 124, 124, 0.507);
+}
+
+@mixin border($position) {
+  text-align: $position;
+  font-family: $font-main;
+  color: rgba(53, 53, 53, 0.842);
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 1em;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  letter-spacing: 4px;
+}

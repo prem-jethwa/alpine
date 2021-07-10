@@ -1,0 +1,43 @@
+.map {
+  width: 100%;
+  max-width: 900px;
+  margin: 1em auto;
+}
+.map-container {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  margin: 1em auto;
+  border: rgb(121, 121, 121) solid 10px;
+  border-radius: 10px;
+  /* box-shadow: 0 0 5px rgba(160, 160, 160, 0.63); */
+}
+
+.map h2 {
+  max-width: 200px;
+  text-align: center;
+  font-size: 1.5rem;
+
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  letter-spacing: 4px;
+  color: rgba(53, 53, 53, 0.842);
+  font-family: "Righteous", cursive;
+}
+.map h2 div {
+  text-align: center;
+  border-radius: 10px;
+  border-bottom: 10px solid;
+  width: 70px;
+  height: 10px;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .map h2 {
+    font-size: 1.2rem;
+  }
+  .map-container {
+    height: 250px;
+  }
+}

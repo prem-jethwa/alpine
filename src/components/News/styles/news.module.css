@@ -1,0 +1,186 @@
+.article-container {
+  max-width: 900px;
+  margin: 0 auto;
+  margin: auto;
+}
+
+.article-container .news-header {
+  text-align: left;
+  font-family: "Righteous", cursive;
+  color: rgba(53, 53, 53, 0.842);
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 1em;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  letter-spacing: 4px;
+  border-left: 10px solid;
+}
+
+.article-container .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
+          box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
+  background-color: azure;
+  margin: 1em;
+}
+
+.article-container .article .art-content {
+  margin: 0.5em;
+}
+
+.article-container .article img {
+  width: 95%;
+  max-width: 300px;
+  border-radius: 20px;
+  border: 10px solid white;
+}
+
+.article-container .article .title {
+  margin: 0.5em 0;
+  font-family: "Varela Round", sans-serif;
+}
+
+.article-container .article .content {
+  margin: 1.5em 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.article-container .article .source {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1em 0;
+}
+
+.article-container .view-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 90%;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.3em;
+  margin: auto auto 3em auto;
+}
+
+.article-container .view-more .read-news {
+  position: absolute;
+  width: 65%;
+  border-bottom: 1px solid;
+  margin: 0.7em auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 15%;
+  right: 15%;
+  z-index: -3;
+}
+
+.article-container .view-more .read-news_title {
+  position: absolute;
+  z-index: 5;
+  border-radius: 10px;
+  left: 35%;
+  right: 35%;
+  margin: auto;
+  background-color: aliceblue;
+}
+
+.article-container .view-more .prev,
+.article-container .view-more .next {
+  padding: 0.5em;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
+          box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
+  background-color: rgba(128, 128, 128, 0.384);
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.article-container .view-more .prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.article-container .view-more .next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.article-container .view-more .prev:hover,
+.article-container .view-more .next:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .article-container .article .title {
+    font-size: 1.2rem;
+  }
+  .article-container .article .content {
+    font-size: 1rem;
+  }
+  .article-container .news-header {
+    font-size: 1.2rem;
+  }
+  .article-container .view-more .read-news {
+    width: 50%;
+  }
+  .article-container .view-more .read-news_title {
+    font-size: 1.2rem;
+  }
+  .article-container .view-more .prev,
+  .article-container .view-more .next {
+    font-size: 1.1rem;
+  }
+  .article-container .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .article-container .article img {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=news.module.css.map */
