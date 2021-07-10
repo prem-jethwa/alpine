@@ -2,7 +2,7 @@
 
 .article-container {
   @include applyCon;
-  margin: 1em auto;
+  margin: 2em auto;
 
   .news-header {
     @include border(left);
