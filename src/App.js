@@ -21,8 +21,6 @@ const App = () => {
     const testingRateLimit = async () => {
       try {
         const data = await testReq();
-
-        console.log(data);
       } catch (err) {
         console.log(err);
         setIsRateLimitExist(false);

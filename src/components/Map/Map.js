@@ -18,8 +18,6 @@ const Map = () => {
 
   const position = [latLon?.lat, latLon?.lon];
 
-  console.log("MAP updated"); //test
-
   return (
     <>
       <div className={classes["map"]}>

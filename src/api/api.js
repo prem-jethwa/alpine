@@ -5,7 +5,6 @@ const { REACT_APP_IP_KEY } = process.env;
 const _getRequest = async (url) => {
   try {
     const response = await fetch(url);
-    console.log(response.statusText, response);
     if (!response.ok)
       throw new Error({ type: "error", message: response.statusText });
 
@@ -21,7 +20,7 @@ const _getRequest = async (url) => {
 
 const _ipLookUp = async () => {
   try {
-    const res = await fetch(`https:ipinfo.io?token=${REACT_APP_IP_KEY}`);
+    const res = await fetch(`https://ipinfo.io?token=${REACT_APP_IP_KEY}`);
     return await res.json();
   } catch (err) {
     return { type: "iplookupfail", message: "IP Look Up fail!" };
