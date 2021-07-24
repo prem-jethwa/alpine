@@ -48,7 +48,6 @@ const App = () => {
     setLatLon(weatherData.latLon);
   }, [weatherData]);
 
-  console.log(weatherData, isItEmptyObj(weatherData));
   return (
     <WeatherContext.Provider value={ctxValue}>
       <Header data={ctxValue} />
