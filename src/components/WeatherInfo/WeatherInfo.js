@@ -119,7 +119,7 @@ const WeatherInfo = ({ onWeatherInfo }) => {
       onWeatherInfo({ data, latLon });
     };
     getRes();
-  }, [data]);
+  }, [data, latLon]);
 
   async function handleIpLookup() {
     setlatLon(await ipLookUp());

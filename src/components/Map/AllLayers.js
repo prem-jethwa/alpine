@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 const { REACT_APP_APPID } = process.env;
 
 const AllLayers = ({ latLon }) => {
-  const fillBlueOptions = { fillColor: "red", color: "blue" };
+  const fillBlueOptions = { fillColor: "yellow", color: "red" };
 
   return (
     <LayersControl position="topright">
