@@ -18,10 +18,12 @@ const _getRequest = async (url) => {
   }
 };
 
-const _ipLookUp = async () => {
+export const ipLookUp = async () => {
   try {
     const res = await fetch(`https://ipinfo.io?token=${REACT_APP_IP_KEY}`);
-    return await res.json();
+    const data = await res.json();
+
+    return data.city;
   } catch (err) {
     return { type: "iplookupfail", message: "IP Look Up fail!" };
   }
@@ -66,12 +68,14 @@ export const getGeolocation = async () => {
     const loc = await _getLocation();
     return loc;
   } catch (err) {
-    if (err.type && err.type === "noSupport") return { error: err.message };
+    // if (err.type && err.type === "noSupport") return { error: err.message };
 
-    const res = await _ipLookUp();
-    if (err.type && err.type === "iplookupfail") return { error: err.message };
+    // const res = await ipLookUp();
+    // if (err.type && err.type === "iplookupfail") return { error: err.message };
 
-    return res.city;
+    // return res.city;
+    console.log(err);
+    throw new Error(err.message);
   }
 };
 

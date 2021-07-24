@@ -117,6 +117,27 @@
   font-weight: 600;
 }
 
+.iploopup-btn {
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  padding: 0.5em;
+  margin: 2em auto 1em auto;
+  border-radius: 10px;
+  font-size: 1.2em;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.534);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.534);
+  cursor: pointer;
+  border: 2px solid #6a1cc4;
+}
+
+.iploopup-btn:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.534);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.534);
+  background-color: aliceblue;
+}
+
 @media (max-width: 700px) {
   .secHeader {
     font-size: 1.2rem;

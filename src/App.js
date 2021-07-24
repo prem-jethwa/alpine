@@ -10,6 +10,12 @@ import { testReq } from "./api/api";
 
 // Configure evn variables
 // require("dotenv").config();
+const isItEmptyObj = (obj) => {
+  if (!obj || typeof obj !== "object") return false;
+  const isThere = Object.keys(obj).length !== 0;
+
+  return isThere;
+};
 
 const App = () => {
   const [isRateLimitExist, setIsRateLimitExist] = useState(true);
@@ -42,6 +48,7 @@ const App = () => {
     setLatLon(weatherData.latLon);
   }, [weatherData]);
 
+  console.log(weatherData, isItEmptyObj(weatherData));
   return (
     <WeatherContext.Provider value={ctxValue}>
       <Header data={ctxValue} />
@@ -54,7 +61,7 @@ const App = () => {
         <>
           {" "}
           <WeatherInfo onWeatherInfo={getWeatherInfo} />
-          <Map />
+          {!weatherData?.data?.error && <Map />}
           <News />
         </>
       )}

@@ -1,6 +1,6 @@
 import classes from "./styles/weatherInfo.module.css";
 
-const WeatherDetails = (props) => {
+const WeatherDataPoints = (props) => {
   return (
     <div className={classes["weather-details"]}>
       <h1>Data Points</h1>
@@ -28,4 +28,4 @@ const WeatherDetails = (props) => {
   );
 };
 
-export default WeatherDetails;
+export default WeatherDataPoints;

@@ -4,6 +4,7 @@
   @include applyCon;
   margin: 4em auto;
 
+  text-align: center;
   .news-header {
     @include border(left);
     border-left: 10px solid;
@@ -12,7 +13,7 @@
   .article {
     @include flex(row);
     @include setBtnStyle;
-
+    text-align: left;
     background-color: azure;
     margin: 1em;
 

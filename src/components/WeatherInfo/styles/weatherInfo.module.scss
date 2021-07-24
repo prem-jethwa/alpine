@@ -27,4 +27,20 @@
   @import "./weather-details";
 }
 
+.iploopup-btn {
+  @include rmDefault;
+  padding: 0.5em;
+  margin: 2em auto 1em auto;
+  border-radius: 10px;
+  font-size: 1.2em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.534);
+  cursor: pointer;
+  border: 2px solid rgb(106, 28, 196);
+}
+
+.iploopup-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.534);
+  background-color: aliceblue;
+}
+
 @import "./media-query";
