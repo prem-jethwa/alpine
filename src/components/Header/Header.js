@@ -1,6 +1,6 @@
 import React from "react";
-import Search from "./Search";
 import Location from "./Location";
+import Time from "./Time";
 import classes from "./styles/header.module.css";
 // import { useState, useEffect, useContext } from "react";
 // import { WeatherContext } from "../../context/weatherContext";
@@ -12,8 +12,8 @@ const Header = () => {
       <div className={`${classes["nav-wrapper"]} ${classes.container}`}>
         <h1 className={classes.logo}>Alpine</h1> {/* <img alt="logo" /> */}
         <div className={classes["search-location"]}>
-          <Search />
           <Location />
+          <Time />
         </div>
       </div>
     </nav>
@@ -34,7 +34,7 @@ export default Header;
 //   const location = await getGeolocation();
 
 //   if (typeof location === "object" && location.error)
-//     return setlatLon({ error: "Location access denied!" });
+//     return setlatLon({ error: "Time access denied!" });
 
 //   console.log(location);
 //   setlatLon(location);

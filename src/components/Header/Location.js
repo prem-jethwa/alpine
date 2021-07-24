@@ -1,31 +1,35 @@
+// import React, { Fragment, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import classes from "./styles/header.module.css";
-import React, { useState, useEffect } from "react";
+import { WeatherContext } from "../../context/WeatherContext";
 
+// module
 const Location = () => {
-  var [date, setDate] = useState(new Date());
+  const [loc, setLoc] = useState({});
+  const ctx = useContext(WeatherContext);
 
   useEffect(() => {
-    var timer = setInterval(() => setDate(new Date()), 1000);
-    return function cleanup() {
-      clearInterval(timer);
+    const getLoc = async () => {
+      const country = await ctx.data?.sec1?.country;
+      const city = await ctx.data?.sec1?.city;
+      setLoc({ country, city });
     };
-  });
 
-  return <p className={classes.location}>{date.toLocaleTimeString()}</p>;
+    getLoc();
+  }, [ctx]);
+
+  return (
+    <>
+      <div className={classes["search-box"]}>
+        {/* <input /> */}
+        <h2>
+          {(!loc.country || !loc.city) && "Loading..."}
+          {loc.country && loc.city && loc.country + ", " + loc.city}
+        </h2>
+        {/* <button>Search</button> */}
+      </div>
+    </>
+  );
 };
 
 export default Location;
-
-// TRASH
-// <select name="Location" className={classes.location}>
-//   <option></option>
-//   <option>Current Location</option>
-//   <optgroup label="Country">
-//     <option>India</option>
-//     <option>US</option>
-//   </optgroup>
-//   <optgroup label="City">
-//     <option>Delhi</option>
-//     <option>Mumbai</option>
-//   </optgroup>
-// </select>

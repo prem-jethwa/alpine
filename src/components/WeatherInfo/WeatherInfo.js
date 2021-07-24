@@ -38,6 +38,35 @@ const WeatherInfo = ({ onWeatherInfo }) => {
     }
   };
 
+  const reqWithLatLonObj = async () => {
+    const { lat, lon } = latLon;
+    if (lat && lon) {
+      let getData = await getCurrWeatherData(lat, lon);
+
+      if (getData?.type === "error") return setData({ error: getData.message });
+
+      setData(getData);
+      return getData;
+    }
+  };
+
+  const reqWithLatLonStr = async () => {
+    if (typeof latLon !== "string") return;
+    let getData = await getCurrWeatherDataWithTerm(latLon);
+    if (getData?.type === "error") return setData({ error: getData.message });
+
+    // update
+    if (!getData) {
+      return setData({ error: "Location Not found" });
+    }
+
+    //before it was string and its object of lan and lon from openweather response
+    setlatLon(getData.coord);
+    setData(getData);
+
+    return getData;
+  };
+
   useEffect(() => {
     const getRes = async () => {
       await getLatLon();
@@ -50,58 +79,13 @@ const WeatherInfo = ({ onWeatherInfo }) => {
     let mounted = true;
     const fetchWeather = async () => {
       try {
-        let getData;
-        if (!mounted) return;
-
-        //if (typeof latLon === "object" && !isItEmptyObj(latLon)) return; //update
-        // if (!isItEmptyObj(latLon)) return;
-
-        // if (latLon && latLon?.error) //update
         if (!latLon || latLon?.error)
           return setData({ error: "Location Not found" });
 
-        if (isItEmptyObj(latLon)) {
-          const { lat, lon } = latLon;
-          if (!mounted) return;
-          if (lat && lon) {
-            getData = await getCurrWeatherData(lat, lon);
+        if (!mounted) return;
 
-            if (getData?.type === "error")
-              return setData({ error: getData.message });
-
-            return setData(getData);
-          }
-        } else {
-          if (typeof latLon !== "string") return;
-
-          getData = await getCurrWeatherDataWithTerm(latLon);
-          if (getData?.type === "error")
-            return setData({ error: getData.message });
-
-          // update
-          if (!getData) {
-            return setData({ error: "Location Not found" });
-          }
-
-          setlatLon(getData.coord);
-          return setData(getData);
-        }
-
-        // if (!latLon) return setData({ error: "Location Not found" });
-
-        // if (!mounted) return;
-
-        // getData = await getCurrWeatherDataWithTerm(latLon);
-        // if (getData?.type === "error")
-        //   return setData({ error: getData.message });
-
-        // if (!getData) {
-        //   //update
-        //   return setData({ error: "Location Not found" });
-        // }
-
-        // setlatLon(getData.coord);
-        // return setData(getData);
+        if (isItEmptyObj(latLon)) reqWithLatLonObj();
+        else reqWithLatLonStr();
       } catch (err) {
         if (err.message === "Too Many Requests")
           setData({ error: err.message });
@@ -124,7 +108,6 @@ const WeatherInfo = ({ onWeatherInfo }) => {
   async function handleIpLookup() {
     setlatLon(await ipLookUp());
   }
-  console.log(latLon);
 
   return (
     <section className={classes["section"]}>
@@ -153,3 +136,27 @@ const WeatherInfo = ({ onWeatherInfo }) => {
 };
 
 export default WeatherInfo;
+
+// DEPRICATED
+//if (typeof latLon === "object" && !isItEmptyObj(latLon)) return; //update
+// if (!isItEmptyObj(latLon)) return;
+
+// if (latLon && latLon?.error) //update
+
+// ////
+
+// if (!latLon) return setData({ error: "Location Not found" });
+
+// if (!mounted) return;
+
+// getData = await getCurrWeatherDataWithTerm(latLon);
+// if (getData?.type === "error")
+//   return setData({ error: getData.message });
+
+// if (!getData) {
+//   //update
+//   return setData({ error: "Location Not found" });
+// }
+
+// setlatLon(getData.coord);
+// return setData(getData);

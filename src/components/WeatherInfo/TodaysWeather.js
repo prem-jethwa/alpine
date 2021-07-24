@@ -20,7 +20,7 @@ const formatName = (name) => {
   );
 };
 
-const reduser = (state, action) => {
+const reduser = (_, action) => {
   switch (action.weather) {
     case "rain":
       return { url: rain };
