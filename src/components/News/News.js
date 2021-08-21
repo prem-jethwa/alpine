@@ -11,15 +11,16 @@ const News = () => {
   const [renderArt, setRenderArt] = useState([]);
   const [page, setPage] = useState(1);
   const [isPageThere, setisPageThere] = useState({ next: true, prev: false });
+  const [errMsg, setErrMsg] = useState(null);
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
         const data = await getNews();
 
-        if (data.status === "ok") setArticles(data.articles);
+        setArticles(data.data); // for newsapi.com -> replace 'data.data' to "data.articales"
       } catch (err) {
-        console.log(err);
+        setErrMsg("Sorry No News.. Aur api request limit exit.");
       }
     };
     fetchNews();
@@ -34,7 +35,7 @@ const News = () => {
       });
     }
     if (page === totalPage) {
-      setisPageThere((state) => {
+      setisPageThere(() => {
         return { next: false, prev: true };
       });
     }
@@ -76,26 +77,29 @@ const News = () => {
   return (
     <div className={classes["article-container"]} id="art-con">
       <h2 className={classes["news-header"]}>Latest News</h2>
-      {!renderArt[0] && <Spinner />}
+      {!renderArt[0] && !errMsg && <Spinner />}
+      {errMsg && <h2> {errMsg} </h2>}
       {renderArt[0] &&
         renderArt.map((art) => {
           return <Article art={art} />;
         })}
 
-      <div className={classes["view-more"]} onClick={() => {}}>
-        {isPageThere.prev && (
-          <div className={classes.prev} onClick={gotoPrevArt}>
-            Previous
-          </div>
-        )}
-        <p className={classes["read-news_title"]}>Read More News</p>
-        {isPageThere.next && (
-          <div className={classes.next} onClick={gotoNextArt}>
-            Next
-          </div>
-        )}
-        <div className={classes["read-news"]}></div>
-      </div>
+      {renderArt[0] && !errMsg && (
+        <div className={classes["view-more"]} onClick={() => {}}>
+          {isPageThere.prev && (
+            <div className={classes.prev} onClick={gotoPrevArt}>
+              Previous
+            </div>
+          )}
+          <p className={classes["read-news_title"]}>Read More News</p>
+          {isPageThere.next && (
+            <div className={classes.next} onClick={gotoNextArt}>
+              Next
+            </div>
+          )}
+          <div className={classes["read-news"]}></div>
+        </div>
+      )}
     </div>
   );
 };

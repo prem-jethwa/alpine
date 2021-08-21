@@ -80,10 +80,13 @@ export const getGeolocation = async () => {
 };
 
 export const getNews = async () => {
-  const data = await _getRequest(`${BASE_URI}weather/news`);
+  try {
+    const data = await _getRequest(`${BASE_URI}weather/news`);
 
-  // console.log("currNews: ", data);
-  return data;
+    return data;
+  } catch (err) {
+    throw new Error(err);
+  }
 };
 
 export const testReq = async () => {
