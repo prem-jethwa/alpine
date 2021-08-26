@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={classes.height}></div>
       <footer className={classes["footer-con"]}>
         <div className={classes.footer}>
-          <a href="#">View Creator's Website</a>
+          <a href="https://premjethwa.com/">View Creator's Website</a>
           <p>
             Design & Developed by <span> PREM JETHWA </span>
           </p>
