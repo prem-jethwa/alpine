@@ -8,7 +8,9 @@ const Footer = () => {
       <div className={classes.height}></div>
       <footer className={classes["footer-con"]}>
         <div className={classes.footer}>
-          <a href="https://premjethwa.com/">View Creator's Website</a>
+          <a target="_blank" href="https://premjethwa.com/">
+            View Creator's Website
+          </a>
           <p>
             Design & Developed by <span> PREM JETHWA </span>
           </p>
@@ -18,6 +20,7 @@ const Footer = () => {
         <p>
           <div className={classes.license}>
             <a
+              target="_blank"
               rel="license"
               href="http://creativecommons.org/licenses/by-nc/4.0/"
             >
@@ -29,6 +32,7 @@ const Footer = () => {
             <br />
             This work is licensed under a
             <a
+              target="_blank"
               rel="license"
               href="http://creativecommons.org/licenses/by-nc/4.0/"
             >
