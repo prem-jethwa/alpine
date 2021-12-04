@@ -8,7 +8,7 @@
 .article-container .news-header {
   text-align: left;
   font-family: "Righteous", cursive;
-  color: rgba(53, 53, 53, 0.842);
+  color: #3e2c41;
   font-size: 1.7rem;
   font-weight: 500;
   margin: 1em;
@@ -34,7 +34,7 @@
   -webkit-box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
           box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
   text-align: left;
-  background-color: azure;
+  background-color: #5c527f;
   margin: 1em;
 }
 
@@ -46,7 +46,7 @@
   width: 95%;
   max-width: 300px;
   border-radius: 20px;
-  border: 10px solid white;
+  border: 10px solid #5c527f;
 }
 
 .article-container .article .title {
@@ -114,7 +114,7 @@
   left: 35%;
   right: 35%;
   margin: auto;
-  background-color: aliceblue;
+  background-color: #5c527f;
 }
 
 .article-container .view-more .prev,
@@ -123,7 +123,7 @@
   border-radius: 15px;
   -webkit-box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
           box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
-  background-color: rgba(128, 128, 128, 0.384);
+  background-color: #2a7ca5;
   padding: 0.5em;
   cursor: pointer;
   -webkit-user-select: none;

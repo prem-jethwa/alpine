@@ -14,7 +14,7 @@
     @include flex(row);
     @include setBtnStyle;
     text-align: left;
-    background-color: azure;
+    background-color: $pri-bg;
     margin: 1em;
 
     .art-content {
@@ -24,7 +24,7 @@
       width: 95%;
       max-width: 300px;
       border-radius: 20px;
-      border: 10px solid white;
+      border: 10px solid $pri-bg;
     }
 
     .title {

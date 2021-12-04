@@ -1,8 +1,8 @@
 // virable declaration
-$pri-bg: #4aa96b8f;
-$sec-bg: #4ca1a3;
-$section-bg: rgba(191, 225, 255, 0.808);
-$loc-bg: #4ca1a3a6;
+$pri-bg: #5c527f;
+$sec-bg: linear-gradient(180deg, #4eb8ff, #ffe1e1b1);
+$section-bg: #2a7ca5;
+$loc-bg: #3e2c41;
 
 $border-pri: rgba(0, 152, 179, 0.767);
 
@@ -43,7 +43,7 @@ $font-default: "Varela Round", sans-serif;
 @mixin border($position) {
   text-align: $position;
   font-family: $font-main;
-  color: rgba(53, 53, 53, 0.842);
+  color: $loc-bg;
   font-size: 1.7rem;
   font-weight: 500;
   margin: 1em;

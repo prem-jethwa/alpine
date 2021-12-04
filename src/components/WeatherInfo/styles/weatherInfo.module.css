@@ -1,13 +1,13 @@
 .section {
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 4em;
+  margin-bottom: 8em;
 }
 
 .secHeader {
   text-align: right;
   font-family: "Righteous", cursive;
-  color: rgba(53, 53, 53, 0.842);
+  color: #3e2c41;
   font-size: 1.7rem;
   font-weight: 500;
   margin: 1em;
@@ -32,8 +32,10 @@
   border-radius: 15px;
   -webkit-box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
           box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
-  background-color: #4ca1a3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4eb8ff), to(#ffe1e1b1));
+  background: linear-gradient(180deg, #4eb8ff, #ffe1e1b1);
   font-family: "Josefin Sans", sans-serif;
+  color: #3e2c41;
   margin: 1em;
   padding: 1.5em;
   height: 300px;

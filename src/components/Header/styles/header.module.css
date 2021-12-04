@@ -1,6 +1,6 @@
 nav {
   padding: 1em 0;
-  background-color: #4aa96b8f;
+  background-color: #5c527f;
 }
 
 .nav-wrapper {
@@ -71,7 +71,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 60%;
-  background-color: #4ca1a3a6;
+  background-color: #3e2c41;
   margin: auto;
   padding: 0.5em;
   border-radius: 8px;

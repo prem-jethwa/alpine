@@ -8,9 +8,10 @@
   max-width: 800px;
   height: 400px;
   margin: 1em auto;
-  border: rgb(121, 121, 121) solid 10px;
+  border: #3e2c41 solid 10px;
   border-radius: 10px;
   /* box-shadow: 0 0 5px rgba(160, 160, 160, 0.63); */
+  margin-bottom: 10em;
 }
 
 .map h2 {
@@ -21,7 +22,7 @@
   margin: 1em auto;
   padding: 0.5em 1em;
   letter-spacing: 4px;
-  color: rgba(53, 53, 53, 0.842);
+  color: #3e2c41;
   font-family: "Righteous", cursive;
 }
 .map h2 div {
