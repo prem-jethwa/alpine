@@ -3,15 +3,15 @@
   margin: 0 0.5em 0 0.5em;
 
   .location {
-    font-size: 1.7rem;
-    margin-top: 0.3em;
+    font-size: $header-font-size;
+    // margin-top: 0.3em;
   }
   .temp {
     position: relative;
-    margin: 2em auto auto auto;
+    margin: 1.1em auto auto auto;
 
     p {
-      font-size: 8rem;
+      font-size: 6rem;
     }
     span {
       position: absolute;

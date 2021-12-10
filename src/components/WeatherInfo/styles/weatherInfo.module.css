@@ -1,20 +1,28 @@
+.clip-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b0d8b6), to(#00b1ff));
+  background: linear-gradient(180deg, #b0d8b6, #00b1ff);
+}
+
 .section {
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 8em;
+  padding: 1em;
 }
 
 .secHeader {
-  text-align: right;
-  font-family: "Righteous", cursive;
-  color: #3e2c41;
-  font-size: 1.7rem;
-  font-weight: 500;
+  text-align: left;
+  color: #116530;
   margin: 1em;
   border-radius: 10px;
-  padding: 0.5em 1em;
+  padding: 0.3em 0.5em;
+  border-left: 10px solid;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 10px;
   letter-spacing: 4px;
-  border-right: 10px solid;
+  line-height: 1em;
+  border-left: 10px solid;
+  margin: 1em;
 }
 
 .weather-info {
@@ -28,17 +36,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5em;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
-          box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
-  background: -webkit-gradient(linear, left top, left bottom, from(#4eb8ff), to(#ffe1e1b1));
-  background: linear-gradient(180deg, #4eb8ff, #ffe1e1b1);
   font-family: "Josefin Sans", sans-serif;
-  color: #3e2c41;
-  margin: 1em;
+  color: #3b5360;
   padding: 1.5em;
-  height: 300px;
 }
 
 .weather-info .loc-temp {
@@ -56,17 +56,16 @@
 }
 
 .weather-info .loc-temp .location {
-  font-size: 1.7rem;
-  margin-top: 0.3em;
+  font-size: 2rem;
 }
 
 .weather-info .loc-temp .temp {
   position: relative;
-  margin: 2em auto auto auto;
+  margin: 1.1em auto auto auto;
 }
 
 .weather-info .loc-temp .temp p {
-  font-size: 8rem;
+  font-size: 6rem;
 }
 
 .weather-info .loc-temp .temp span {
@@ -86,36 +85,31 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 0.5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .weather-info .todays-weather h1 {
-  margin-top: 0.5em;
+  font-size: 2rem;
 }
 
 .weather-info .todays-weather .weather-img {
-  max-width: 200px;
+  max-width: 150px;
   width: 100%;
-  max-height: 300px;
-  margin: 1em auto auto auto;
-  opacity: 2;
-}
-
-.weather-info .todays-weather p {
-  font-size: 1.5rem;
+  max-height: 250px;
+  margin: 0.5rem auto auto auto;
+  opacity: 0.6;
 }
 
 .weather-info .weather-details h1 {
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
+  font-size: 2rem;
 }
 
 .weather-info .weather-details p {
-  font-size: 1.3rem;
-  margin: 1em auto;
+  font-size: 1.2rem;
+  line-height: 1.5em;
   font-weight: 600;
 }
 

@@ -3,6 +3,7 @@
 .article-container {
   @include applyCon;
   margin: 4em auto;
+  margin-top: 10em;
 
   text-align: center;
   .news-header {
@@ -12,7 +13,7 @@
 
   .article {
     @include flex(row);
-    @include setBtnStyle;
+    // @include setBtnStyle;
     text-align: left;
     background-color: $pri-bg;
     margin: 1em;
@@ -30,13 +31,15 @@
     .title {
       margin: 0.5em 0;
       font-family: $font-default;
+      font-size: $title-font-size;
     }
 
     .content {
       margin: 1.5em 0;
       font-family: $font-pri;
-      font-size: 1.2rem;
+      font-size: $content-font-size;
       font-weight: 700;
+      color: $secondary-font-color;
     }
 
     .source {

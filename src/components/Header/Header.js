@@ -11,10 +11,10 @@ const Header = () => {
     <nav className="nav">
       <div className={`${classes["nav-wrapper"]} ${classes.container}`}>
         <h1 className={classes.logo}>Alpine</h1> {/* <img alt="logo" /> */}
-        <div className={classes["search-location"]}>
+        {/* <div className={classes["search-location"]}>
           <Location />
           <Time />
-        </div>
+        </div> */}
       </div>
     </nav>
   );

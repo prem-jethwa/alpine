@@ -4,12 +4,20 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  --primary-bg: #e8e8cc;
+  --secondary-bg: #accbb0;
+  --primary-font-color: #116530;
+  --secondary-font-color: #3b5360;
+  --primary-gradient-color: linear-gradient(#b0d8b6, #00b1ff);
+}
 .spinner-con {
   width: 100%;
 }
 body {
-  background-color: #6e85b2;
-  color: #dbe6fd;
+  background-color: #e8e8cc;
+  color: #116530;
 }
 
 .toomany {

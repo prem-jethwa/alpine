@@ -1,38 +1,46 @@
 .map {
-  width: 100%;
+  width: 95%;
   max-width: 900px;
-  margin: 4em auto;
+  margin: 1em auto;
+  background-color: #accbb0;
+  padding: 1em;
+
+  border-radius: 30px;
 }
 .map-container {
-  width: 90%;
-  max-width: 800px;
+  width: 95%;
+  /* max-width: 800px; */
   height: 400px;
   margin: 1em auto;
-  border: #3e2c41 solid 10px;
+  /* border: #3e2c41 solid 10px; */
   border-radius: 10px;
   /* box-shadow: 0 0 5px rgba(160, 160, 160, 0.63); */
-  margin-bottom: 10em;
+  /* margin-bottom: 10em; */
 }
 
 .map h2 {
-  max-width: 200px;
-  text-align: center;
-  font-size: 1.5rem;
+  /* max-width: 200px; */
+  /* text-align: center; */
+  font-size: 2rem;
 
-  margin: 1em auto;
-  padding: 0.5em 1em;
+  margin: 1em;
+  padding: 0.3em 0.5em;
+  /* font-family: "Righteous", cursive; */
+
+  border-left: 10px solid;
+  font-weight: 500;
+  border-radius: 10px;
   letter-spacing: 4px;
-  color: #3e2c41;
-  font-family: "Righteous", cursive;
+  line-height: 1em;
 }
-.map h2 div {
+/* .map h2 div {
   text-align: center;
   border-radius: 10px;
   border-bottom: 10px solid;
   width: 70px;
   height: 10px;
   margin: auto;
-}
+} */
 
 @media (max-width: 600px) {
   .map h2 {

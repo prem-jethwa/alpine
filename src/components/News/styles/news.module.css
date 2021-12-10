@@ -2,19 +2,22 @@
   max-width: 900px;
   margin: 0 auto;
   margin: 4em auto;
+  margin-top: 10em;
   text-align: center;
 }
 
 .article-container .news-header {
   text-align: left;
-  font-family: "Righteous", cursive;
-  color: #3e2c41;
-  font-size: 1.7rem;
-  font-weight: 500;
+  color: #116530;
   margin: 1em;
   border-radius: 10px;
-  padding: 0.5em 1em;
+  padding: 0.3em 0.5em;
+  border-left: 10px solid;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 10px;
   letter-spacing: 4px;
+  line-height: 1em;
   border-left: 10px solid;
 }
 
@@ -29,12 +32,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5em;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
-          box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
   text-align: left;
-  background-color: #5c527f;
+  background-color: #e8e8cc;
   margin: 1em;
 }
 
@@ -46,12 +45,13 @@
   width: 95%;
   max-width: 300px;
   border-radius: 20px;
-  border: 10px solid #5c527f;
+  border: 10px solid #e8e8cc;
 }
 
 .article-container .article .title {
   margin: 0.5em 0;
   font-family: "Varela Round", sans-serif;
+  font-size: 1.5rem;
 }
 
 .article-container .article .content {
@@ -59,6 +59,7 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 1.2rem;
   font-weight: 700;
+  color: #3b5360;
 }
 
 .article-container .article .source {
@@ -114,7 +115,7 @@
   left: 35%;
   right: 35%;
   margin: auto;
-  background-color: #5c527f;
+  background-color: #e8e8cc;
 }
 
 .article-container .view-more .prev,
@@ -123,7 +124,7 @@
   border-radius: 15px;
   -webkit-box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
           box-shadow: 0 0 10px rgba(119, 119, 119, 0.308);
-  background-color: #2a7ca5;
+  background-color: #accbb0;
   padding: 0.5em;
   cursor: pointer;
   -webkit-user-select: none;

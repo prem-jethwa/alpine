@@ -1,26 +1,31 @@
 @import "../../global";
 
+.clip-bg {
+  background: $sec-bg;
+}
 .section {
   @include applyCon;
-  margin-bottom: 8em;
+  // margin-bottom: 8em;
+  padding: 1em;
 }
 
 .secHeader {
-  @include border(right);
-  border-right: 10px solid;
+  @include border(left);
+  border-left: 10px solid;
+  margin: 1em;
 }
 
 .weather-info {
   @include flex(row);
-  @include setBtnStyle;
+  // @include setBtnStyle;
   // border: 1px solid rgba(0, 181, 253, 0.651);
-  background: $sec-bg;
+  // background: $sec-bg;
   font-family: $font-header;
   color: $loc-bg;
 
-  margin: 1em;
+  // margin: 1em;
   padding: 1.5em;
-  height: 300px;
+  // height: 300px;
   // background-color: $section-bg;
 
   @import "./loc-temp";

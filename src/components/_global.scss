@@ -1,10 +1,20 @@
 // virable declaration
-$pri-bg: #5c527f;
-$sec-bg: linear-gradient(180deg, #4eb8ff, #ffe1e1b1);
-$section-bg: #2a7ca5;
-$loc-bg: #3e2c41;
+$pri-bg: #e8e8cc;
+$sec-bg: linear-gradient(180deg, #b0d8b6, #00b1ff);
+$section-bg: #accbb0;
+$loc-bg: #3b5360;
 
 $border-pri: rgba(0, 152, 179, 0.767);
+
+$header-font-size: 2rem;
+$title-font-size: 1.5rem;
+$content-font-size: 1.2rem;
+
+$primary-bg: #e8e8cc;
+$secondary-bg: #accbb0;
+$primary-font-color: #116530;
+$secondary-font-color: #3b5360;
+$primary-gradient-color: linear-gradient(#b0d8b6, #00b1ff);
 
 // font styles
 $font-pri: "Cormorant Garamond", serif;
@@ -42,12 +52,16 @@ $font-default: "Varela Round", sans-serif;
 
 @mixin border($position) {
   text-align: $position;
-  font-family: $font-main;
-  color: $loc-bg;
-  font-size: 1.7rem;
-  font-weight: 500;
+  // font-family: $font-main;
+  color: $primary-font-color;
   margin: 1em;
   border-radius: 10px;
-  padding: 0.5em 1em;
+  padding: 0.3em 0.5em;
+
+  border-left: 10px solid;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 10px;
   letter-spacing: 4px;
+  line-height: 1em;
 }
