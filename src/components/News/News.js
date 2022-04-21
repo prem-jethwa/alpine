@@ -45,8 +45,8 @@ const News = () => {
 
   async function paginate(page_number) {
     const copyArt = await [...articles];
-    const start = (page_number - 1) * perPage;
-    const end = page_number * perPage;
+    const start = (page_number - 1) * perPage; // (2 - 1) * 2 = 2
+    const end = page_number * perPage; // 2 * 2 = 4
 
     setRenderArt(copyArt.slice(start, end));
   }

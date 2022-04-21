@@ -5,7 +5,7 @@ const AllowLoc = ({ error, showIpLookUp, handleIpLookup }) => {
       <div className={classes.motel}>
         <h2>
           {" "}
-          Pleace Allow Location To View the weather{" "}
+          Please Allow Location To View the weather{" "}
           <a
             target="_blank"
             href="https://support.google.com/chrome/answer/142065?co=GENIE.Platform%3DDesktop&hl=en"

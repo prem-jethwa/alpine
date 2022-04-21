@@ -65,10 +65,6 @@ const TodaysWeather = (props) => {
     dispatch({ weather });
   }, [weather]);
 
-  // useEffect(() => {
-  //   dispatch({ weather: "default" });
-  // }, []);
-
   return (
     <div className={classes["todays-weather"]}>
       <h1>{props.info?.desc && formatName(props.info.desc)}</h1>
@@ -77,9 +73,7 @@ const TodaysWeather = (props) => {
         src={`${state.url}`}
         alt="weather img"
       />
-      {/* <p>{props.info?.desc && props.info.desc}</p> */}
     </div>
   );
 };
-// require('../../img/dummy-weather-img.png')
 export default TodaysWeather;

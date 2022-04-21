@@ -15,17 +15,3 @@ const Time = () => {
 };
 
 export default Time;
-
-// TRASH
-// <select name="Location" className={classes.location}>
-//   <option></option>
-//   <option>Current Location</option>
-//   <optgroup label="Country">
-//     <option>India</option>
-//     <option>US</option>
-//   </optgroup>
-//   <optgroup label="City">
-//     <option>Delhi</option>
-//     <option>Mumbai</option>
-//   </optgroup>
-// </select>

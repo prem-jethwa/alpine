@@ -65,15 +65,8 @@ export const getCurrWeatherDataWithTerm = async (term) => {
 
 export const getGeolocation = async () => {
   try {
-    const loc = await _getLocation();
-    return loc;
+    return await _getLocation();
   } catch (err) {
-    // if (err.type && err.type === "noSupport") return { error: err.message };
-
-    // const res = await ipLookUp();
-    // if (err.type && err.type === "iplookupfail") return { error: err.message };
-
-    // return res.city;
     console.log(err);
     throw new Error(err.message);
   }
