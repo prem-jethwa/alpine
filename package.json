@@ -14,8 +14,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "export PORT=4001 && react-scripts start",
-    "build": "react-scripts build",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && set PORT=4001 && react-scripts start",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
